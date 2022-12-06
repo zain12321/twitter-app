@@ -71,7 +71,8 @@ const Post = ({ id, post }) => {
   }
 
   return (
-    <div className='mt-4 border-t border-gray-500 px-4 pt-6 pb-4 cursor-pointer' onClick={() => router.push(`/${id}`)}>
+    <div className=' border-t
+    hover:bg-[#0a0909] border-gray-500 px-4 pt-6 pb-4 cursor-pointer' onClick={() => router.push(`/${id}`)}>
       <div className='grid grid-cols-[48px,1fr] gap-4'>
 
         <div>
@@ -82,7 +83,6 @@ const Post = ({ id, post }) => {
         <div>
           <div className='block sm:flex gap-1'>
             <h1 className='font-medium'>{post?.username}</h1>
-
             <div className='flex'>
               <p className='text-gray-500'>@{post?.tag} &nbsp;·&nbsp;</p>
               <p className='text-gray-500'>
@@ -92,7 +92,7 @@ const Post = ({ id, post }) => {
 
 
           </div>
-          <p>{post?.text}</p>
+          <p className='text-[15px] w-[450px] truncate'>{post?.text}</p>
           <img
             className='max-h-[450px] object-cover rounded-[20px] mt-2'
             src={post?.image}

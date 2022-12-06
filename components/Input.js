@@ -4,7 +4,7 @@ import { AiOutlineGif, AiOutlineClose } from "react-icons/ai"
 import { RiBarChart2Line } from "react-icons/ri"
 import { IoCalendarNumberOutline } from "react-icons/io5"
 import { HiOutlineLocationMarker } from "react-icons/hi"
-import { useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
@@ -78,11 +78,12 @@ const Input = () => {
     }
 
     return (
-        <div className={`mt-4 px-4 ${loading && "opacity-60"}`}>
+        <div className={`my-4 px-4 ${loading && "opacity-60"}`}>
 
             <div className='grid grid-cols-[48px,1fr] gap-4'>
 
-                <div>
+                <div onClick={signOut}>
+
                     <img className='h-12 w-12 rounded-full object-contain' src={session?.user?.image} alt="" />
                 </div>
 
@@ -149,7 +150,6 @@ const Input = () => {
                             <Picker
                                 onEmojiSelect={addEmoji}
                                 data={data}
-
                                 theme="dark"
                             />
                         </div>
