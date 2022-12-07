@@ -92,7 +92,7 @@ const Post = ({ id, post }) => {
 
 
           </div>
-          <p className='text-[15px] w-[450px] truncate'>{post?.text}</p>
+          <p className='text-[17px] w-[450px] truncate'>{post?.text}</p>
           <img
             className='max-h-[450px] object-cover rounded-[20px] mt-2'
             src={post?.image}

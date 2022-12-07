@@ -79,17 +79,13 @@ const Input = () => {
 
     return (
         <div className={`my-4 px-4 ${loading && "opacity-60"}`}>
-
             <div className='grid grid-cols-[48px,1fr] gap-4'>
-
                 <div onClick={signOut}>
-
                     <img className='h-12 w-12 rounded-full object-contain' src={session?.user?.image} alt="" />
                 </div>
-
                 <div className='w-[90%]'>
                     <textarea
-                        className='w-[100%] bg-transparent outline-none text-[20px]'
+                        className='w-[100%] scrollbar-hide bg-transparent outline-none text-[20px]'
                         rows="2"
                         placeholder="What's Happening?"
                         value={input}
