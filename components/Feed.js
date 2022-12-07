@@ -6,9 +6,7 @@ import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 
 const Feed = () => {
-
-  const [posts, setPosts] = useState([])
-
+  const [posts, setPosts] = useState([]);
   useEffect(
     () =>
       onSnapshot(
@@ -25,12 +23,10 @@ const Feed = () => {
         Home
         <HiOutlineSparkles />
       </div>
-
       <Input />
       {posts.map((post) => (
         <Post key={post.id} id={post.id} post={post.data()} />
       ))}
-
     </section>
   )
 }

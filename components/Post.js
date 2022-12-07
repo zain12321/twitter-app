@@ -92,15 +92,13 @@ const Post = ({ id, post }) => {
 
 
           </div>
-          <p className='text-[17px] w-[450px] truncate'>{post?.text}</p>
+          <textarea className='text-[17px] text w-[450px] scrollbar-hide bg-transparent' 
+          rows="2">{post?.text}</textarea>
           <img
-            className='max-h-[450px] object-cover rounded-[20px] mt-2'
+            className='max-h-[450px] object-cover rounded-[20px] '
             src={post?.image}
             alt="" />
-
-
-          <div className='flex justify-between text-[20px] mt-4 w-[80%]'>
-
+          <div className='flex justify-between text-[20px] mt-3 w-[80%]'>
             <div className='flex gap-1 items-center'>
               <BsChat className='hoverEffect w-7 h-7 p-1' onClick={(e) => {
                 e.stopPropagation()
