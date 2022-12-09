@@ -89,11 +89,9 @@ const Post = ({ id, post }) => {
                 <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
               </p>
             </div>
-
-
           </div>
-          <textarea className='text-[17px] text w-[450px] scrollbar-hide bg-transparent' 
-          rows="2">{post?.text}</textarea>
+          <span className='text-[17px] text w-[450px] scrollbar-hide bg-transparent' 
+          >{post?.text}</span>
           <img
             className='max-h-[450px] object-cover rounded-[20px] '
             src={post?.image}
